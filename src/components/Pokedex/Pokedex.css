@@ -1,0 +1,10 @@
+.Pokedex-Wrapper{
+    display: flex;
+    flex-direction: column;
+
+}
+#text-heading{
+    margin: 0 auto;
+    letter-spacing: 5px;
+    color: black;
+}
