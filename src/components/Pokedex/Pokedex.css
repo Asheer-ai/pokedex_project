@@ -1,10 +1,23 @@
-.Pokedex-Wrapper{
+.pokedex-wrapper {
     display: flex;
     flex-direction: column;
-
 }
-#text-heading{
-    margin: 0 auto;
+
+/* Improved heading style */
+#text-heading {
+    font-size: 3rem;
+    font-weight: bold;
     letter-spacing: 5px;
-    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Subtle hover effect for heading */
+#text-heading:hover {
+    transform: scale(1.1);
 }

@@ -1,3 +1,6 @@
-body{
-  background-color: rgb(67, 65, 65);
+body {
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+  background-attachment: fixed;
+  color: white;
 }
+

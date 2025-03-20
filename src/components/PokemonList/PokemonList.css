@@ -1,5 +1,52 @@
-.pokemon-list-wrapper{
-    width: 200px;
-    margin: 2rem auto; /* Centers the div */
-    color: black;
+.pokemon-list-wrapper {
+    margin: 2rem auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Pokémon cards */
+.pokemon-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 1000px;
+}
+
+/* Loading text */
+.loading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffcc00;
+    margin-top: 2rem;
+}
+
+/* Pagination buttons */
+.controls {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.controls button {
+    
+    
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, opacity 0.3s;
+}
+
+.controls button:hover {
+    transform: scale(1.1);
+}
+
+.controls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }

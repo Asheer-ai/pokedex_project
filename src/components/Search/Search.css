@@ -1,10 +1,58 @@
-.search-wrapper{
-    width: 500px;
-    margin: 0 auto;
+.search-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
 }
 
-#pokemon-name-search{
-    margin-top: 2rem;
-    width: 600px;
-    padding: 1.5rem;
+.search-box {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+}
+
+#pokemon-name-search {
+    width: 100%;
+    padding: 1rem 3rem 1rem 1rem;
+    font-size: 1.2rem;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+@keyframes rainbowGlow {
+    0% { box-shadow: 0 0 15px rgb(255, 0, 0); } /* Red */
+    20% { box-shadow: 0 0 15px rgb(255, 165, 0); } /* Orange */
+    40% { box-shadow: 0 0 15px rgb(182, 182, 5); } /* Yellow */
+    60% { box-shadow: 0 0 15px rgb(4, 144, 4); } /* Green */
+    80% { box-shadow: 0 0 15px rgb(0, 0, 255); } /* Blue */
+    100% { box-shadow: 0 0 15px rgb(128, 0, 128); } /* Purple */
+}
+
+#pokemon-name-search:focus {
+    animation: rainbowGlow 1.5s infinite alternate;
+    border-color: transparent;
+    outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    font-size: 1.2rem;
+    pointer-events: none;
+}
+
+#pokemon-name-search::placeholder {
+    color: #aaa;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .search-box {
+        max-width: 90%;
+    }
 }
