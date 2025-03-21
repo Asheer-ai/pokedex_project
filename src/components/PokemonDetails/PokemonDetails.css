@@ -1,0 +1,78 @@
+.pokemon-details-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ff4e50, #fc913a);
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 400px;
+    margin: 2rem auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    color: white;
+    text-align: center;
+}
+
+.pokemon-details-name {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.pokemon-details-image {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+}
+
+.pokemon-info {
+    font-size: 1.2rem;
+}
+
+.pokemon-types {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.pokemon-type {
+    padding: 0.3rem 0.7rem;
+    border-radius: 12px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+/* Type-specific colors */
+.pokemon-type.fire { background: #ff5733; color: white; }
+.pokemon-type.water { background: #3498db; color: white; }
+.pokemon-type.grass { background: #27ae60; color: white; }
+.pokemon-type.electric { background: #f1c40f; color: black; }
+.pokemon-type.ice { background: #74b9ff; color: black; }
+.pokemon-type.fighting { background: #d63031; color: white; }
+.pokemon-type.poison { background: #6a0572; color: white; }
+.pokemon-type.ground { background: #e67e22; color: black; }
+.pokemon-type.flying { background: #81ecec; color: black; }
+.pokemon-type.psychic { background: #e84393; color: white; }
+.pokemon-type.bug { background: #26de81; color: black; }
+.pokemon-type.rock { background: #a77d5d; color: white; }
+.pokemon-type.ghost { background: #341f97; color: white; }
+.pokemon-type.dark { background: #2d3436; color: white; }
+.pokemon-type.dragon { background: #ff9f1a; color: white; }
+.pokemon-type.steel { background: #95a5a6; color: black; }
+.pokemon-type.fairy { background: #ffcccc; color: black; }
+
+/* Loading & error messages */
+.loading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: yellow;
+    margin-top: 2rem;
+}
+
+.error {
+    font-size: 1.2rem;
+    color: red;
+    font-weight: bold;
+    margin-top: 2rem;
+}
