@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-function usePokemonList(url){
+function usePokemonList(url,type){
      // const [pokemonList, setpokemonList] = useState([]);
     // const [loading, setLoading] = useState(true);
 
@@ -24,14 +24,20 @@ function usePokemonList(url){
         const response = await axios.get(pokemonListState.pokedex_url); //this downloads list of 20 pokemons
         const PokemonResults = response.data.results;//we will get an array of Pokemons from result
 
+        console.log("response is",response.data.pokemon);
+        console.log(pokemonListState)
         setPokemonListState((state)=>({
             ...state,
             next_url:response.data.next,
             prev_url:response.data.previous
         }));
-        
-
-        const PookieResultPromise = PokemonResults.map((pokemon) => axios.get(pokemon.url));//iterating over the array of pokemons,and using their url, to create an array of promises
+        if(type){
+            setPokemonListState((state)=>({
+                ...state,
+                pokemonList: response.data.pokemon.slice(0,5)
+            }))
+        }else{
+            const PookieResultPromise = PokemonResults.map((pokemon) => axios.get(pokemon.url));//iterating over the array of pokemons,and using their url, to create an array of promises
         //that will download those 20 pokemons
 
         //passing that promise array to axios.all
@@ -53,6 +59,9 @@ function usePokemonList(url){
             pokemonList:pokemonResult,
             isloading:false
         }));
+        }
+
+        
         
     }
 
