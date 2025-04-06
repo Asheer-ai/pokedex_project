@@ -1,9 +1,11 @@
 .pokedex-wrapper {
     display: flex;
     flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
 }
 
-/* Improved heading style */
+/* Heading styles */
 #text-heading {
     font-size: 3rem;
     font-weight: bold;
@@ -15,9 +17,34 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: transform 0.3s ease-in-out;
+    cursor: pointer;
 }
 
-/* Subtle hover effect for heading */
 #text-heading:hover {
     transform: scale(1.1);
+}
+
+/* 📱 Responsive Styling */
+@media (max-width: 768px) {
+    .pokedex-wrapper {
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+
+    #text-heading {
+        font-size: 2.2rem;
+        letter-spacing: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pokedex-wrapper {
+        padding: 0.5rem;
+        gap: 1rem;
+    }
+
+    #text-heading {
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+    }
 }

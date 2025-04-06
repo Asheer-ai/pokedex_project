@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 1rem;
 }
 
 /* Pokémon cards */
@@ -21,6 +22,7 @@
     font-weight: bold;
     color: #ffcc00;
     margin-top: 2rem;
+    text-align: center;
 }
 
 /* Pagination buttons */
@@ -28,11 +30,11 @@
     display: flex;
     gap: 1rem;
     margin-top: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .controls button {
-    
-    
     border: none;
     font-size: 1rem;
     font-weight: bold;
@@ -40,6 +42,8 @@
     border-radius: 8px;
     cursor: pointer;
     transition: transform 0.2s ease-in-out, opacity 0.3s;
+    background-color: #ffcc00;
+    color: #1a1a1a;
 }
 
 .controls button:hover {
@@ -49,4 +53,33 @@
 .controls button:disabled {
     opacity: 0.5;
     cursor: not-allowed;
+}
+
+/* 📱 Responsive Styling */
+@media (max-width: 768px) {
+    .pokemon-wrapper {
+        gap: 1rem;
+    }
+
+    .controls button {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .pokemon-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .controls {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .controls button {
+        width: 100%;
+        max-width: 250px;
+    }
 }

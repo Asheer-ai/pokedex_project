@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 3rem;
+    padding: 0 1rem;
 }
 
 .search-box {
@@ -22,12 +23,12 @@
 }
 
 @keyframes rainbowGlow {
-    0% { box-shadow: 0 0 15px rgb(255, 0, 0); } /* Red */
-    20% { box-shadow: 0 0 15px rgb(255, 165, 0); } /* Orange */
-    40% { box-shadow: 0 0 15px rgb(182, 182, 5); } /* Yellow */
-    60% { box-shadow: 0 0 15px rgb(4, 144, 4); } /* Green */
-    80% { box-shadow: 0 0 15px rgb(0, 0, 255); } /* Blue */
-    100% { box-shadow: 0 0 15px rgb(128, 0, 128); } /* Purple */
+    0% { box-shadow: 0 0 15px rgb(255, 0, 0); }
+    20% { box-shadow: 0 0 15px rgb(255, 165, 0); }
+    40% { box-shadow: 0 0 15px rgb(182, 182, 5); }
+    60% { box-shadow: 0 0 15px rgb(4, 144, 4); }
+    80% { box-shadow: 0 0 15px rgb(0, 0, 255); }
+    100% { box-shadow: 0 0 15px rgb(128, 0, 128); }
 }
 
 #pokemon-name-search:focus {
@@ -50,9 +51,24 @@
     color: #aaa;
 }
 
-/* Responsive Design */
+/* 💡 Responsive Design */
 @media (max-width: 600px) {
+    .search-wrapper {
+        margin-top: 2rem;
+        padding: 0 0.5rem;
+    }
+
+    #pokemon-name-search {
+        padding: 0.8rem 2.5rem 0.8rem 1rem;
+        font-size: 1rem;
+    }
+
+    .search-icon {
+        font-size: 1rem;
+        right: 12px;
+    }
+
     .search-box {
-        max-width: 90%;
+        max-width: 100%;
     }
 }

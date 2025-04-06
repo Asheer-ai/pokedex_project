@@ -1,4 +1,4 @@
-.Pokemon{
+.Pokemon {
     margin-top: 2rem;
     flex-basis: 20%;
     height: 200px;
@@ -6,16 +6,64 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: transform 0.3s ease-in-out;
 }
-.pookie-name{
-    font-size: larger;
-    letter-spacing: 0.5rem;
+
+.Pokemon:hover {
+    transform: scale(1.05);
 }
-.pokemon-image{
+
+.Pokemon a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.pookie-name {
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    text-transform: capitalize;
+    font-weight: bold;
+    text-align: center;
+}
+
+.pokemon-image {
     margin-top: 1rem;
     height: 150px;
     max-height: 80%;
+    object-fit: contain;
 }
 
+/* 📱 Responsive Styles */
+@media (max-width: 768px) {
+    .Pokemon {
+        flex-basis: 45%;
+        width: 200px;
+        height: 180px;
+    }
 
+    .pookie-name {
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+    }
 
+    .pokemon-image {
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Pokemon {
+        flex-basis: 100%;
+        width: 90%;
+        height: auto;
+    }
+
+    .pookie-name {
+        font-size: 1rem;
+        letter-spacing: 0.05rem;
+    }
+
+    .pokemon-image {
+        height: 100px;
+    }
+}
