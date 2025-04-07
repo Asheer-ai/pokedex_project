@@ -24,7 +24,6 @@
     transform: scale(1.1);
 }
 
-/* 📱 Responsive Styling */
 @media (max-width: 768px) {
     .pokedex-wrapper {
         padding: 1rem;
